@@ -1,8 +1,14 @@
-<html>
-  <head>
-    <title>My app</title>
-  </head>
+<!doctype html><html lang="en">
+<head>  
+<meta charset="utf-8">  
+<title>Angular Bootstrap 5 Examples</title>  <base href="/">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="icon" type="image/x-icon" href="favicon.ico">  
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
   <body>
+  <app-root></app-root>  
+  <script src="../node_modules/jquery/dist/jquery.js"></script>  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!--<my-app>Loading...</my-app>-->
     <h2>Micron Logistics Invoice Audit Application</h2>
     <p></p>
@@ -10,7 +16,7 @@
       <div class="row">
         <div class="col">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Invoice: </label>
+            <label for="exampleFormControlInput1" class="form-label">Invoice Number: </label>
             <input class="form-control" type="text" value="802033247" aria-label="readonly input example" disabled readonly>
           </div>
         </div>
@@ -67,6 +73,54 @@
     <p></p>
   </div>
   <button type="submit" class="btn btn-primary">Update</button> 
+  <button type="button" class="btn btn-secondary"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="This top tooltip is themed via CSS variables.">
+  Cancel
+</button>
+
+  <div class="row">
+    <p></p>
+  </div>
+  <div class="row">
+    <p><h2>Charges List</h2></p>
+  </div>
+
+  <table class="table table-bordered table-striped table-hover ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Charges Type</th>
+      <th scope="col">Billed Amount</th>
+      <th scope="col">Rated Amount</th>
+      <th scope="col">Paid Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Base Rate</td>
+      <td>7.00</td>
+      <td>5.62</td>
+      <td><input class="form-control form-control-sm" type="text" value="7.00"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Fuel Surcharge</td>
+      <td>7.00</td>
+      <td>5.62</td>
+      <td><input class="form-control form-control-sm" type="text" value="7.00"></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Peak Surcharge</td>
+      <td>7.00</td>
+      <td>5.62</td>
+      <td><input class="form-control form-control-sm" type="text" value="7.00"></td>
+    </tr>
+  </tbody>
+</table>
   
   </div>
   </body>
